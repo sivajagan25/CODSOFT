@@ -1,0 +1,77 @@
+import java.util.*;
+import java.util.Scanner;
+class calculation
+{   int avg;
+    public void user()
+    {
+         System.out.println("how many marks do you want to calculate:");
+        Scanner v=new Scanner(System.in);
+        int n =v.nextInt();
+        System.out.println("enter the" +" "+ n + " " + "marks:");
+        int[]no =new int[n];
+        for(int i=0;i<n;i++)
+        {
+           no[i]=v.nextInt();
+        }
+    
+         for(int i=0;i<n;i++)
+        {
+          System.out.println("The mark"+ i +" "+"is:"+ no[i]);  
+        }
+        int total=0;
+        for(int i=0;i<n;i++)
+        {
+            total=total+no[i];
+        }
+                 avg=total/n;
+                 System.out.println("The total marks is:" + total +"\n" + "The average mark is:" +avg);
+    } 
+    
+      
+       public void g()
+       {
+                 if(avg>=90 && avg<=100)
+                 {
+                     System.out.println("congrats,your grade is S");
+                     
+                 }
+        
+                else if(avg>=80 && avg<=90)
+                 {
+                     System.out.println("congrats,your grade is A");
+                     
+                 }
+        
+                else if(avg>=70 && avg<=79)
+                 {
+                     System.out.println("congrats,your grade is B");
+                     
+                 }
+                  else if(avg>=60 && avg<=69)
+                 {
+                     System.out.println(" congrats,your grade is C");
+                     
+                 }
+                  else if(avg>=50 && avg<=59)
+                 {
+                     System.out.println("congrats,your grade is D");
+                     
+                 }
+                    else 
+                 {
+                     System.out.println("sorry,you failed in exam");
+                     
+                 }
+        }
+        
+    }
+     public class jagan
+    {
+    public static void main(String[] args)
+    {
+        calculation v =new calculation();
+        v.user();
+        v.g();
+        
+     }
+}
