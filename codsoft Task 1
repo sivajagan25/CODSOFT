@@ -1,0 +1,75 @@
+import java.util.Random;
+import java.util.*;
+class random
+{
+   public void f()
+    {    System.out.println("Welcome to the Guess the Number game!");
+         System.out.println("I'm thinking of a number between " + "1" + " to" + "100" + "."+"\n");
+         Random rand = new Random();
+        int randomvalue = rand.nextInt(100);
+        int j,i,k=3;
+        for(i=1;i<=k;i++)
+        {
+        System.out.println("enter any number:"); 
+        Scanner user = new Scanner(System.in);
+      int u=user.nextInt();
+    if(u==randomvalue)
+      {
+         System.out.println("your guess is correct");  
+         break;
+      }
+       else if(u>randomvalue)
+      {
+          System.out.println("your guess is higher than the random number");
+          
+      }
+       else if(u<randomvalue)
+      {
+          System.out.println("your guess is lower than the random nnumber");
+      }
+        }
+      if(i==1) 
+      {
+          System.out.println("Congratulation,you have scored 10 points"); 
+          
+      }
+      else if(i==2) 
+      {
+          System.out.println("Congratulation,you have scored 8 points");
+      } 
+      else if(i==3) 
+      {
+          System.out.println("Congratulation,you have scored 6 points");
+      } 
+      else {
+          System.out.println("Sorry,you are failed better luck next time");
+      }
+    
+ }
+
+    public void user()
+    {
+         System.out.println("Enter yes or No do you want to play again?");
+         Scanner u = new Scanner(System.in);
+         String s=u.nextLine();
+         if(s.equals("yes"))
+         {
+            f();
+         }
+         else
+         {
+             System.out.println("Thanks for playing");
+         }
+    }
+}
+class main
+{
+     public static void main(String[] args) 
+     {
+        random vel =new random();
+        vel.f();
+        vel.user();
+     }
+}
+        
+   
